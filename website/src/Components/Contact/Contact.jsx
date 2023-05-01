@@ -132,7 +132,7 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch('https://mz-x-26.000webhostapp.com/', {
+    fetch('https://mz-x-26.000webhostapp.com/index.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json'},
       body: JSON.stringify({ message })
