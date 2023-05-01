@@ -132,7 +132,7 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch('http://localhost:5173/api/send-message.php', {
+    fetch('https://main--glowing-blancmange-eea260.netlify.app/.netlify/functions/get-mapid', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json'},
       body: JSON.stringify({ message })
