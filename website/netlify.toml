@@ -1,18 +1,16 @@
-# Define the functions directory
 [build]
   functions = "functions/api"
 
-# Redirect requests to the PHP file in the functions directory
 [[redirects]]
-  from = "/api/submit.php"
-  to = "/.netlify/functions/api/submit.php"
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
   status = 200
 
-# Define environment variables
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "Content-Type"
+
 [build.environment]
   PHP_VERSION = "7.4"
-
-# Add comments to explain each section
-# Define the functions directory
-# Redirect requests to the PHP file in the functions directory
-# Define environment variables
